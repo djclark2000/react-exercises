@@ -1,0 +1,27 @@
+body {
+    background-color: #282c34;
+    color: rgb(228, 228, 228);
+}
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+}
+
+li {
+    /* list-style-type: none; */
+    list-style: none;
+   
+}
+
+h1 {
+    text-align: center;
+}
+
+.loading {
+    font-size: 1.5rem;
+}
+
