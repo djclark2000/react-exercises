@@ -25,3 +25,21 @@ h1 {
     font-size: 1.5rem;
 }
 
+.film-header-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    display: flex;
+    gap: 1rem;
+    /* align-items: center; */
+    font-size: 1.2rem;
+}
+
+#home-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
