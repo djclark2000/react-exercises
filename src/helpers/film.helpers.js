@@ -27,4 +27,45 @@ function getListOf(list, prop) {
     return resultArray;
 }
 
-export {filterFilmsByDirector, getListOf}; 
+
+
+
+function getFilmStats(list){
+  
+  let acc_score = 0; 
+  // list.forEach((film) => {
+  //   acc_score += film.rt_score;
+  // }); 
+  acc_score = list.reduce((acc, curr) => acc + parseInt(curr.rt_score), 0); 
+
+  const total = list.length; 
+
+  const avg_score = acc_score/total;
+
+  let latest = 0; 
+  list.forEach((film) => {
+    if (latest < film.release_date){
+      latest = film.release_date;
+    }
+  })
+
+  return {
+    avg_score, 
+    acc_score, 
+    total, 
+    latest
+  }
+  // let resultArray = {}; 
+  // let sum = 0; 
+  // let averageScore = 0; 
+  // let latest = ""; 
+  // for (let i = 0; i < list.length; i++){
+  //   sum += list[i].rt_score; 
+
+  // }
+  // averageScore = sum/list.length; 
+} 
+
+
+
+export {filterFilmsByDirector, getListOf, getFilmStats}; 
